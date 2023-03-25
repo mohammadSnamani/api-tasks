@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "8a6bf172-0622-44fa-a52c-8bd54105527d",
+		"name": "API-TASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/constructionStages",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"constructionStages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSingle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/constructionStages/:id",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"constructionStages",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"\",\n  \"startDate\": \"2021-05-01T00:00:00Z\", \n  \"endDate\": null,\n  \"duration\": null,\n  \"durationUnit\": null,\n  \"color\": null,\n  \"externalId\": null,\n  \"status\": \"NEW\"\n}"
+				},
+				"url": {
+					"raw": "{{address}}/constructionStages",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"constructionStages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/constructionStages/:id",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"constructionStages",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/constructionStages/:id",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"constructionStages",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "address",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
